@@ -2,7 +2,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import ThemeSwitch from "./themeToggle";
+
 
 function MobileNav() {
     return (
@@ -26,7 +26,6 @@ export default function Navbar() {
             <a href="https://github.com/CharlesAustin">
                 <FontAwesomeIcon icon={faGithub} />
             </a>
-            <ThemeSwitch />
         </nav>
     );
 }
