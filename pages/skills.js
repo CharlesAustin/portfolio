@@ -29,7 +29,7 @@ export default function Skills() {
                     </Text>
                 </Box>
                 <Box as="section">
-                    <Heading>What I'm working with</Heading>
+                    <Heading>What I&apos;m working with</Heading>
                     <CurrentSkillsGrid test="Cool"/>
                 </Box>
             </Container>
