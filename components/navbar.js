@@ -1,21 +1,14 @@
 import NextLink from "next/link";
 import {
     Box,
-    Container,
     Flex,
-    Stack,
     HStack,
-    VStack,
     Link,
     Menu,
     MenuButton,
     IconButton,
     MenuList,
     MenuItem,
-    MenuItemOption,
-    MenuGroup,
-    MenuOptionGroup,
-    MenuDivider,
 } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import GithubIcon from "./icons/github-icon";

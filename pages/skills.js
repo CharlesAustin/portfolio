@@ -1,21 +1,10 @@
 import {
     Box,
     Container,
-    Grid,
-    GridItem,
     Heading,
     Text,
 } from "@chakra-ui/react";
-import {
-    faHtml5,
-    faCss3,
-    faSquareJs,
-    faPhp,
-} from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import CurrentSkillsGrid from "../components/icons/current-skills-icon-grid";
-import brandIconSet from "../components/icons/current-skills-icon-grid";
-
 
 export default function Skills() {
     return (
