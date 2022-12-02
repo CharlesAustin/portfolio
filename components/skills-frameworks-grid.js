@@ -3,15 +3,17 @@ import {
     faCss3,
     faSquareJs,
     faPhp,
+    faSass,
+    faBootstrap,
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useColorModeValue, Grid, GridItem, Heading } from "@chakra-ui/react";
+import { useColorModeValue, Grid, GridItem, Heading, scaleFadeConfig } from "@chakra-ui/react";
 
-export default function CurrentSkillsGrid() {
+export default function FrameworkGrid() {
     const brandIconSet = [
         {
             id: 0,
-            image: faHtml5,
+            image: faSass,
             color: useColorModeValue("teal", "green"),
             title: "HTML",
         },
@@ -32,13 +34,13 @@ export default function CurrentSkillsGrid() {
             image: faPhp,
             color: useColorModeValue("teal", "green"),
             title: "Php",
-        },
+        }
     ];
 
     return (
         <Grid templateColumns="repeat(5, 1fr)" gap={6}>
             {brandIconSet.map((icon) => (
-                <GridItem key={icon.id}>
+                <GridItem key={icon.id} _hover={{ transform: "scale(1.2)" }}>
                     <FontAwesomeIcon
                         icon={icon.image}
                         size="5x"

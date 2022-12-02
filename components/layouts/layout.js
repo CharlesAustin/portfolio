@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Header from "../header";
-import { Container } from "@chakra-ui/react";
+import { Container, Link } from "@chakra-ui/react";
 // Add footer...
 
 const Layout = ({ children }) => {
@@ -46,6 +46,7 @@ const Layout = ({ children }) => {
                     name="twitter:image"
                     content="https://www.austin-atkinson.com/A-logo.svg"
                 />
+                
                 <title>Austin Atkinson</title>
             </Head>
             <Header />

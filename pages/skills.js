@@ -1,10 +1,6 @@
-import {
-    Box,
-    Container,
-    Heading,
-    Text,
-} from "@chakra-ui/react";
-import CurrentSkillsGrid from "../components/icons/current-skills-icon-grid";
+import { Box, Container, Heading, Text } from "@chakra-ui/react";
+import FrameworkGrid from "../components/skills-frameworks-grid";
+import LanguageGrid from "../components/skills-language-grid";
 
 export default function Skills() {
     return (
@@ -12,14 +8,18 @@ export default function Skills() {
             <Container>
                 <Box as="section">
                     <Heading>Skills</Heading>
-                    <Text>
-                        Past, present &amp; future. Here are the technologies in
-                        my tool box.
-                    </Text>
+                    <Text>Here are the technologies in my tool box.</Text>
                 </Box>
                 <Box as="section">
-                    <Heading>What I&apos;m working with</Heading>
-                    <CurrentSkillsGrid test="Cool"/>
+                    <Heading>Languages</Heading>
+                    <LanguageGrid />
+                </Box>
+                <Box as="section">
+                    <Heading>Frameworks &amp; Libraries</Heading>
+                    <FrameworkGrid />
+                </Box>
+                <Box as="section">
+                    <Heading>Design Tools</Heading>
                 </Box>
             </Container>
         </Box>
