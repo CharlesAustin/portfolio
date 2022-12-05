@@ -11,7 +11,7 @@ import {
     MenuItem,
 } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
-import GithubIcon from "./icons/github-icon";
+import GithubIcon from "./github-icon-link";
 
 export default function Navbar() {
     const navItems = ["work", "skills", "about", "contact"];
@@ -19,7 +19,7 @@ export default function Navbar() {
         <Box as="nav" w="100%">
             <Flex justify="end">
                 <Menu isLazy>
-                    <HStack mr={5} display={{base: 'none', md: 'flex'}}>
+                    <HStack mr={5} display={{ base: "none", md: "flex" }}>
                         {navItems.map((name) => (
                             <Box key={name}>
                                 <Link as={NextLink} href={`/${name}`}>

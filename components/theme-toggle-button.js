@@ -1,6 +1,6 @@
 import { useColorMode, useColorModeValue, IconButton } from "@chakra-ui/react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSun, faMoon } from "@fortawesome/free-solid-svg-icons";
+import {SunIcon, MoonIcon} from "@chakra-ui/icons";
+import colors from "../theme/styles/colors";
 
 export default function ThemeToggleButton() {
     const { toggleColorMode } = useColorMode();
@@ -8,10 +8,10 @@ export default function ThemeToggleButton() {
     return (
         <IconButton
             aria-label="Toggle colour theme"
-            colorScheme={useColorModeValue("teal", "green")}
+            colorScheme={useColorModeValue("mint", "mint")}
             icon={useColorModeValue(
-                <FontAwesomeIcon icon={faSun} />,
-                <FontAwesomeIcon icon={faMoon} />
+                <MoonIcon/>,
+                <SunIcon/>
             )}
             onClick={toggleColorMode}
         ></IconButton>
