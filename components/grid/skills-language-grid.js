@@ -11,6 +11,7 @@ import {
     Icon,
     Tag,
     TagLabel,
+    Flex,
 } from "@chakra-ui/react";
 import { SiHtml5, SiCss3, SiJavascript, SiPhp, SiSass } from "react-icons/si";
 
@@ -49,41 +50,51 @@ export default function LanguageGrid() {
     ];
 
     return (
-        <Card>
-            <CardHeader>
+        <>
+            <Flex justify="center" mb={5}>
                 <Tag size="lg" variant="solid">
                     <TagLabel>
                         <Heading size={4}>Languages</Heading>
                     </TagLabel>
                 </Tag>
-            </CardHeader>
-            <CardBody>
-                <Grid
-                    gridTemplateColumns={{
-                        base: "repeat(auto-fit, 3rem)",
-                        md: "repeat(auto-fit, 4rem)",
-                    }}
-                    gap={6}
-                    justifyContent="center"
-                >
-                    {brandIconSet.map((icon) => (
-                        <GridItem
-                            key={icon.id}
-                            _hover={{ transform: "scale(1.2)" }}
-                        >
-                            <Tooltip hasArrow label={icon.title}>
-                                <Box as="span">
-                                    <Icon
-                                        as={icon.image}
-                                        boxSize={{ base: "3rem", md: "4rem" }}
-                                        color={icon.color}
-                                    />
-                                </Box>
-                            </Tooltip>
-                        </GridItem>
-                    ))}
-                </Grid>
-            </CardBody>
-        </Card>
+            </Flex>
+            <Card>
+                <CardBody>
+                    <Grid
+                        gridTemplateColumns={{
+                            base: "repeat(auto-fit, 2rem)",
+                            sm: "repeat(auto-fit, 3rem)",
+                        }}
+                        gap={6}
+                        justifyContent="center"
+                    >
+                        {brandIconSet.map((icon) => (
+                            <GridItem
+                                key={icon.id}
+                                _hover={{ transform: "scale(1.2)" }}
+                            >
+                                <Tooltip hasArrow label={icon.title}>
+                                    <Box as="span">
+                                        <Icon
+                                            as={icon.image}
+                                            display="flex"
+                                            boxSize={{
+                                                base: "2rem",
+                                                sm: "3rem",
+                                            }}
+                                            color={useColorModeValue(
+                                                "black",
+                                                "white"
+                                            )}
+                                            _hover={{ color: icon.color }}
+                                        />
+                                    </Box>
+                                </Tooltip>
+                            </GridItem>
+                        ))}
+                    </Grid>
+                </CardBody>
+            </Card>
+        </>
     );
 }

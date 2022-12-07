@@ -9,6 +9,9 @@ import {
     CardHeader,
     CardBody,
     Icon,
+    Flex,
+    Tag,
+    TagLabel
 } from "@chakra-ui/react";
 
 import {
@@ -24,19 +27,19 @@ export default function DesignPlatformGrid() {
         {
             id: 0,
             image: SiFigma,
-            color: useColorModeValue("black", "white"),
+            color: "black",
             title: "Figma",
         },
         {
             id: 1,
             image: SiMiro,
-            color: useColorModeValue("black", "white"),
+            color: "brand.miroYellow",
             title: "Miro",
         },
         {
             id: 2,
             image: SiAdobecreativecloud,
-            color: useColorModeValue("black", "white"),
+            color: "brand.adobeRed",
             title: "Adobe Creative Cloud",
         },
         {
@@ -54,37 +57,58 @@ export default function DesignPlatformGrid() {
     ];
 
     return (
-        <Card>
-            <CardHeader>
-                <Heading>Design Tools &amp; Platforms</Heading>
-            </CardHeader>
-            <CardBody>
-                <Grid
-                    gridTemplateColumns={{
-                        base: "repeat(auto-fit, 3rem)",
-                        md: "repeat(auto-fit, 4rem)",
-                    }}
-                    gap={6}
-                    justifyContent="center"
-                >
-                    {brandIconSet.map((icon) => (
-                        <GridItem
-                            key={icon.id}
-                            _hover={{ transform: "scale(1.2)" }}
-                        >
-                            <Tooltip hasArrow label={icon.title}>
-                                <Box as="span">
-                                    <Icon
-                                        as={icon.image}
-                                        boxSize={{ base: "3rem", md: "4rem" }}
-                                        color={icon.color}
-                                    />
-                                </Box>
-                            </Tooltip>
-                        </GridItem>
-                    ))}
-                </Grid>
-            </CardBody>
-        </Card>
+        <>
+            <Flex justify="center" mb={5} gap={3}>
+                <Tag size="lg" variant="solid">
+                    <TagLabel>
+                        <Heading size={4}>Design Tools</Heading>
+                    </TagLabel>
+                </Tag>
+                <Tag size="lg" variant="solid">
+                    <TagLabel>
+                        <Heading size={4}>Platforms</Heading>
+                    </TagLabel>
+                </Tag>
+            </Flex>
+            <Card>
+                <CardBody>
+                    <Grid
+                        gridTemplateColumns={{
+                            base: "repeat(auto-fit, 2rem)",
+                            sm: "repeat(auto-fit, 3rem)",
+                        }}
+                        gap={6}
+                        justifyContent="center"
+                    >
+                        {brandIconSet.map((icon) => (
+                            <GridItem
+                                display="flex"
+                                align="center"
+                                key={icon.id}
+                                _hover={{ transform: "scale(1.2)" }}
+                            >
+                                <Tooltip hasArrow label={icon.title}>
+                                    <Box as="span">
+                                        <Icon
+                                            as={icon.image}
+                                            display="flex"
+                                            boxSize={{
+                                                base: "2rem",
+                                                sm: "3rem",
+                                            }}
+                                            color={useColorModeValue(
+                                                "black",
+                                                "white"
+                                            )}
+                                            _hover={{ color: icon.color }}
+                                        />
+                                    </Box>
+                                </Tooltip>
+                            </GridItem>
+                        ))}
+                    </Grid>
+                </CardBody>
+            </Card>
+        </>
     );
 }

@@ -3,32 +3,50 @@ import {
     Box,
     Flex,
     HStack,
+    List,
+    ListItem,
     Link,
     Menu,
     MenuButton,
     IconButton,
     MenuList,
     MenuItem,
+    chakra,
 } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import GithubIcon from "./github-icon-link";
 
-export default function Navbar() {
+export default function Navbar({ path, href }) {
+    const navLinks = [
+        { title: "work", href: "/work" },
+        { title: "skills", href: "/skills" },
+        { title: "about", href: "/about" },
+        { title: "contact", href: "/contact" },
+    ];
     const navItems = ["work", "skills", "about", "contact"];
+    const NavLink = chakra(NextLink, {
+        shouldForwardProp: (prop) => {['href', 'target', 'children', ...prop]},
+    })
+
     return (
         <Box as="nav" w="100%">
-            <Flex justify="end">
+            <Flex justify="end" align="center">
                 <Menu isLazy>
-                    <HStack mr={5} display={{ base: "none", md: "flex" }}>
-                        {navItems.map((name) => (
-                            <Box key={name}>
-                                <Link as={NextLink} href={`/${name}`}>
-                                    {name}
+                    <List display={{ base: "none", md: "flex" }}>
+                        {navLinks.map((link) => (
+                            <ListItem
+                                key={link.title}
+                                ml={8}
+                                fontFamily={"'IBM Plex Sans', sans-serif"}
+                                textTransform="capitalize"
+                            >
+                                <Link as={NextLink} href={link.href} _activeLink={{color: "blue"}}>
+                                    {link.title}
                                 </Link>
-                            </Box>
+                            </ListItem>
                         ))}
-                        <GithubIcon />
-                    </HStack>
+                    </List>
+                    <GithubIcon />
                     <MenuButton
                         as={IconButton}
                         aria-label="Main nav"

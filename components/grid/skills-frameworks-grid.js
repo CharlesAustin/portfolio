@@ -9,6 +9,9 @@ import {
     CardBody,
     Icon,
     Tooltip,
+    Flex,
+    Tag,
+    TagLabel
 } from "@chakra-ui/react";
 
 import {
@@ -42,7 +45,7 @@ export default function FrameworkGrid() {
         {
             id: 3,
             image: SiNextdotjs,
-            color: useColorModeValue("black", "white"),
+            color: "black",
             title: "Next.js",
         },
         {
@@ -54,37 +57,56 @@ export default function FrameworkGrid() {
     ];
 
     return (
-        <Card>
-            <CardHeader>
-                <Heading>Frameworks &amp; Libraries</Heading>
-            </CardHeader>
-            <CardBody>
-                <Grid
-                    gridTemplateColumns={{
-                        base: "repeat(auto-fit, 3rem)",
-                        md: "repeat(auto-fit, 4rem)",
-                    }}
-                    gap={6}
-                    justifyContent="center"
-                >
-                    {brandIconSet.map((icon) => (
-                        <GridItem
-                            key={icon.id}
-                            _hover={{ transform: "scale(1.2)" }}
-                        >
-                            <Tooltip hasArrow label={icon.title}>
-                                <Box as="span">
-                                    <Icon
-                                        as={icon.image}
-                                        boxSize={{ base: "3rem", md: "4rem" }}
-                                        color={icon.color}
-                                    />
-                                </Box>
-                            </Tooltip>
-                        </GridItem>
-                    ))}
-                </Grid>
-            </CardBody>
-        </Card>
+        <>
+            <Flex justify="center" mb={5} gap={3}>
+                <Tag size="lg" variant="solid">
+                    <TagLabel>
+                        <Heading size={4}>Frameworks</Heading>
+                    </TagLabel>
+                </Tag>
+                <Tag size="lg" variant="solid">
+                    <TagLabel>
+                        <Heading size={4}>Libraries</Heading>
+                    </TagLabel>
+                </Tag>
+            </Flex>
+            <Card>
+                <CardBody>
+                    <Grid
+                        gridTemplateColumns={{
+                            base: "repeat(auto-fit, 2rem)",
+                            sm: "repeat(auto-fit, 3rem)",
+                        }}
+                        gap={6}
+                        justifyContent="center"
+                    >
+                        {brandIconSet.map((icon) => (
+                            <GridItem
+                                key={icon.id}
+                                _hover={{ transform: "scale(1.2)" }}
+                            >
+                                <Tooltip hasArrow label={icon.title}>
+                                    <Box as="span">
+                                        <Icon
+                                            as={icon.image}
+                                            display="flex"
+                                            boxSize={{
+                                                base: "2rem",
+                                                sm: "3rem",
+                                            }}
+                                            color={useColorModeValue(
+                                                "black",
+                                                "white"
+                                            )}
+                                            _hover={{ color: icon.color }}
+                                        />
+                                    </Box>
+                                </Tooltip>
+                            </GridItem>
+                        ))}
+                    </Grid>
+                </CardBody>
+            </Card>
+        </>
     );
 }

@@ -4,7 +4,7 @@ export default function Hero() {
     return (
         <Box as="section">
             <Heading size="sm">Greetings! I&apos;m Austin.</Heading>
-            <Heading as="h1" size="4xl">
+            <Heading as="h1" variant="hero">
                 Developer & Designer
             </Heading>
             <Text maxW="60ch">
