@@ -49,6 +49,8 @@ export default function LanguageGrid() {
         },
     ];
 
+    const colorToggle = useColorModeValue("black", "white");
+
     return (
         <>
             <Flex justify="center" mb={5}>
@@ -82,10 +84,7 @@ export default function LanguageGrid() {
                                                 base: "2rem",
                                                 sm: "3rem",
                                             }}
-                                            color={useColorModeValue(
-                                                "black",
-                                                "white"
-                                            )}
+                                            color={colorToggle}
                                             _hover={{ color: icon.color }}
                                         />
                                     </Box>

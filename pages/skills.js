@@ -29,7 +29,7 @@ export default function Skills() {
 
                         <Stack
                             direction="column"
-                            maxW={{base: "100%", sm: "80%"}}
+                            maxW="100%"
                             spacing={16}
                             mx="auto"
                             mt={8}

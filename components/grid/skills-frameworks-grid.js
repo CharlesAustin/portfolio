@@ -56,6 +56,8 @@ export default function FrameworkGrid() {
         },
     ];
 
+    const colorToggle = useColorModeValue("black", "white");
+
     return (
         <>
             <Flex justify="center" mb={5} gap={3}>
@@ -94,10 +96,7 @@ export default function FrameworkGrid() {
                                                 base: "2rem",
                                                 sm: "3rem",
                                             }}
-                                            color={useColorModeValue(
-                                                "black",
-                                                "white"
-                                            )}
+                                            color={colorToggle}
                                             _hover={{ color: icon.color }}
                                         />
                                     </Box>
