@@ -73,9 +73,10 @@ export default function LanguageGrid() {
                         {brandIconSet.map((icon) => (
                             <GridItem
                                 key={icon.id}
+                                transition="150ms all cubic-bezier(0.175, 0.885, 0.3, 1.9)"
                                 _hover={{ transform: "scale(1.2)" }}
                             >
-                                <Tooltip hasArrow label={icon.title}>
+                                <Tooltip hasArrow label={icon.title} fontFamily="'IBM Plex Sans', sans-serif">
                                     <Box as="span">
                                         <Icon
                                             as={icon.image}

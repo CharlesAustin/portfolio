@@ -9,7 +9,7 @@ export default function ThemeToggleButton() {
         <IconButton
             aria-label="Toggle colour theme"
             colorScheme={useColorModeValue("toggleSapphire", "toggleSapphire")}
-            variant="outline"
+            variant="ghost"
             icon={useColorModeValue(
                 <MoonIcon/>,
                 <SunIcon/>
