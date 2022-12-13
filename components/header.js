@@ -6,7 +6,7 @@ import ThemeToggleButton from "./theme-toggle-button";
 export default function Header({ children }) {
     return (
         <Box as="header" py={5}>
-            <Container maxW="container.xl">
+            <Container maxW="container.lg">
                 <Flex alignItems="center">
                     <Logo />
                     <Navbar />

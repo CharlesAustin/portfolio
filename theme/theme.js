@@ -3,7 +3,8 @@ import colors from "./styles/colors";
 import fonts from "./styles/fonts";
 import styles from "./styles/global";
 import { headingTheme } from "./components/Heading";
-import { cardTheme } from "./components/Card";
+import { textTheme } from "./components/Text";
+import { linkTheme } from "./components/Link";
 
 const config = {
     initialColorMode: "dark",
@@ -11,26 +12,15 @@ const config = {
 
 const components = {
     Heading: headingTheme,
-    Card: {
-        baseStyle: {
-            bg: "red"
-        },
-        variants: {
-            'branded': {
-                bg: "red.400",
-                _dark: {
-                    bg: "red.100"
-                }
-            }
-        }
-    }
-}
+    Text: textTheme,
+    Link: linkTheme,
+};
 
 const theme = extendTheme({
     config,
     colors,
     fonts,
     styles,
-    components
+    components,
 });
 export default theme;

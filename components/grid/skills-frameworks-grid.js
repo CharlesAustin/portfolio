@@ -85,6 +85,7 @@ export default function FrameworkGrid() {
                         {brandIconSet.map((icon) => (
                             <GridItem
                                 key={icon.id}
+                                transition="200ms scale ease-in"
                                 _hover={{ transform: "scale(1.2)" }}
                             >
                                 <Tooltip hasArrow label={icon.title}>

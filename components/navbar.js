@@ -25,8 +25,10 @@ export default function Navbar({ path, href }) {
     ];
     const navItems = ["work", "skills", "about", "contact"];
     const NavLink = chakra(NextLink, {
-        shouldForwardProp: (prop) => {['href', 'target', 'children', ...prop]},
-    })
+        shouldForwardProp: (prop) => {
+            ["href", "target", "children", ...prop];
+        },
+    });
 
     return (
         <Box as="nav" w="100%">
@@ -40,13 +42,19 @@ export default function Navbar({ path, href }) {
                                 fontFamily={"'IBM Plex Sans', sans-serif"}
                                 textTransform="capitalize"
                             >
-                                <Link as={NextLink} href={link.href} _activeLink={{color: "blue"}}>
+                                <Link
+                                    as={NextLink}
+                                    href={link.href}
+                                    _activeLink={{ color: "blue" }}
+                                >
                                     {link.title}
                                 </Link>
                             </ListItem>
                         ))}
                     </List>
-                    <GithubIcon />
+                    <Box px={8}>
+                        <GithubIcon />
+                    </Box>
                     <MenuButton
                         as={IconButton}
                         aria-label="Main nav"

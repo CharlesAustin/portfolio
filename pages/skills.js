@@ -15,7 +15,7 @@ export default function Skills() {
         <>
             
                 <Box as="section">
-                    <Box as="section" maxW="xl" margin="0 auto" my={12}>
+                    <Box as="section" maxW="lg" margin="0 auto" my={12}>
                         <Heading fontWeight="bold" variant="h1">
                             Skills
                         </Heading>

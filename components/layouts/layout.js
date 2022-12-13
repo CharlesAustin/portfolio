@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Header from "../header";
-import { Container, Link } from "@chakra-ui/react";
+import Footer from "../footer";
+import { Container, Box } from "@chakra-ui/react";
 // Add footer...
 
 const Layout = ({ children }) => {
@@ -46,11 +47,14 @@ const Layout = ({ children }) => {
                     name="twitter:image"
                     content="https://www.austin-atkinson.com/A-logo.svg"
                 />
-                
+
                 <title>Austin Atkinson</title>
             </Head>
             <Header />
-            <Container maxW="container.xl">{children}</Container>
+            <Box as="main" minH={{base: "calc(100vh - 304px)", md: "calc(100vh - 232px)"}}>
+                <Container maxW="container.lg">{children}</Container>
+            </Box>
+            <Footer />
         </>
     );
 };

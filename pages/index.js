@@ -5,7 +5,6 @@ export default function Home() {
   return (
     <>
       <Hero></Hero>
-      <Button>Test</Button>
     </>
   )
 }
