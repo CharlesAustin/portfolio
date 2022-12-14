@@ -19,10 +19,20 @@ const h1 = defineStyle({
     _dark: {
         color: "sapphire.50",
     },
+}); 
+
+const h2= defineStyle({
+    color: "metal.700",
+    fontWeight: "bold",
+    _dark: {
+        color: "white"
+    }
 });
+
 export const headingTheme = defineStyleConfig({
     variants: {
         hero: hero,
         h1: h1,
+        h2: h2
     },
 });

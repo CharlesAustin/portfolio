@@ -1,4 +1,5 @@
 import NextLink from "next/link";
+import { useRouter } from "next/router";
 import {
     Box,
     Flex,
@@ -12,23 +13,40 @@ import {
     MenuList,
     MenuItem,
     chakra,
+    useColorModeValue,
 } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import GithubIcon from "./github-icon-link";
 
-export default function Navbar({ path, href }) {
+const NavItem = ({ href, children, ...props }) => {
+    const router = useRouter();
+    const active = router.pathname === href;
+    const navBgToggle = useColorModeValue('sapphire.500', 'sapphire.50');
+    const navColorToggle = useColorModeValue('white', 'metal.900')
+    
+    return (
+        <Link
+            as={NextLink}
+            href={href}
+            bg={active ? navBgToggle : undefined}
+            color={active ? navColorToggle :  undefined}
+            {...props}
+        >
+            {children}
+        </Link>
+    );
+};
+
+export default function Navbar(href) {
+
+    
     const navLinks = [
         { title: "work", href: "/work" },
         { title: "skills", href: "/skills" },
         { title: "about", href: "/about" },
         { title: "contact", href: "/contact" },
     ];
-    const navItems = ["work", "skills", "about", "contact"];
-    const NavLink = chakra(NextLink, {
-        shouldForwardProp: (prop) => {
-            ["href", "target", "children", ...prop];
-        },
-    });
+    
 
     return (
         <Box as="nav" w="100%">
@@ -38,17 +56,19 @@ export default function Navbar({ path, href }) {
                         {navLinks.map((link) => (
                             <ListItem
                                 key={link.title}
-                                ml={8}
                                 fontFamily={"'IBM Plex Sans', sans-serif"}
                                 textTransform="capitalize"
                             >
-                                <Link
+                                <NavItem
                                     as={NextLink}
                                     href={link.href}
-                                    _activeLink={{ color: "blue" }}
+                                    px={4}
+                                    py={1}
+                                    borderRadius="100px"
+                                    _hover={{textDecoration: "none"}}
                                 >
                                     {link.title}
-                                </Link>
+                                </NavItem>
                             </ListItem>
                         ))}
                     </List>
@@ -64,14 +84,14 @@ export default function Navbar({ path, href }) {
                         mr={5}
                     />
                     <MenuList>
-                        {navItems.map((name) => (
-                            <MenuItem key={name}>
+                        {navLinks.map((link) => (
+                            <MenuItem key={link.title}>
                                 <Link
                                     as={NextLink}
-                                    href={`/${name}`}
-                                    key={name}
+                                    href={link.href}
+                                    _activeLink={{ color: "red" }}
                                 >
-                                    {name}
+                                    {link.title}
                                 </Link>
                             </MenuItem>
                         ))}

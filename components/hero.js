@@ -13,10 +13,9 @@ import {
 export default function Hero() {
     const bgToggle = useColorModeValue("sapphire.500", "sapphire.50");
     const colorToggle = useColorModeValue("white", "sapphire.900");
-    const boxToggle = useColorModeValue("sapphire.800", "sapphire.100");
 
     return (
-        <Box as="section" py={8} position="relative">
+        <Box as="section" py={8}>
             <Heading
                 as="h2"
                 size="md"
@@ -46,11 +45,6 @@ export default function Hero() {
                     as={NextLink}
                     href="./work"
                     variant="linkButton"
-                    transition="200ms all ease-in"
-                    _hover={{
-                        bg: "sunset.300",
-                        boxShadow: "0 2px 4px #4A070740",
-                    }}
                 >
                     My Work
                 </Link>
