@@ -1,3 +1,4 @@
+import NextLink from "next/link";
 import {
     Box,
     Stack,
@@ -7,6 +8,8 @@ import {
     CardBody,
     Image,
     Text,
+    Link,
+    Flex
 } from "@chakra-ui/react";
 
 export default function FeaturedWorks() {
@@ -14,20 +17,63 @@ export default function FeaturedWorks() {
 
     return (
         <Box as="section">
-            <Heading>Featured Projects</Heading>
-            <Stack direction={{ base: "column", sm: "row" }}>
+            <Heading mb={10}>Featured Projects</Heading>
+            <Stack direction={{ base: "column", sm: "row" }} gap={8}>
                 <Card>
-                    <CardHeader>Featured Project</CardHeader>
-                    <CardBody>
-                        <Image src="" alt="Image here" />
-                        <Text>lorem ipsum...</Text>
+                    <CardHeader>
+                        <Heading>Dream Bucket</Heading>
+                    </CardHeader>
+                    <CardBody pt={0}>
+                        <Flex gap={5} direction={{base: "column", md: "row"}}>
+                            <Image
+                                src="/images/dream-bucket-featured.png"
+                                alt="mountain ranges in the distance"
+                                fit="cover"
+                                htmlHeight={175}
+                                htmlWidth={175}
+                                borderRadius={5}
+                            />
+                            <Text>
+                                A mobile app to track and manage your bucket
+                                list in a collaborative environment.
+                                <Link
+                                    as={NextLink}
+                                    href="/work/dream-bucket"
+                                    display="block"
+                                >
+                                    read more
+                                </Link>
+                            </Text>
+                        </Flex>
                     </CardBody>
                 </Card>
                 <Card>
-                    <CardHeader>Featured Project</CardHeader>
-                    <CardBody>
-                        <Image src="" alt="Image here" />
-                        <Text>lorem ipsum...</Text>
+                    <CardHeader>
+                        <Heading>Conservation Ontario</Heading>
+                    </CardHeader>
+                    <CardBody pt={0}>
+                        <Flex gap={5} direction={{base: "column", md: "row"}}>
+                            <Image
+                                src="/images/conservation-featured.jpg"
+                                alt="mountain ranges in the distance"
+                                fit="cover"
+                                htmlHeight={175}
+                                htmlWidth={175}
+                                height={175}
+                                borderRadius={5}
+                            />
+                            <Text>
+                                A mobile app to track and manage your bucket
+                                list in a collaborative environment.
+                                <Link
+                                    as={NextLink}
+                                    href="/work/conservation-ontario"
+                                    display="block"
+                                >
+                                    read more
+                                </Link>
+                            </Text>
+                        </Flex>
                     </CardBody>
                 </Card>
             </Stack>

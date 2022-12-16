@@ -4,7 +4,7 @@ import theme from "../theme/theme";
 
 export default function Document() {
     return (
-        <Html lang="en">
+        <Html lang="en" style={{overflowY: "scroll"}}>
             <Head>
                 <link
                     rel="apple-touch-icon"
