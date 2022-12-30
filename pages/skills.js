@@ -6,9 +6,10 @@ import {
     Stack,
     useColorModeValue,
 } from "@chakra-ui/react";
-import DesignPlatformGrid from "../components/grid/skills-design-platform-grid";
-import FrameworkGrid from "../components/grid/skills-frameworks-grid";
-import LanguageGrid from "../components/grid/skills-language-grid";
+import SkillsGrid from "../components/skills-grid";
+import { designIconSet } from "../data/design-icons";
+import { frameworksIconSet } from "../data/framework-icons";
+import { languagesIconSet } from "../data/language-icons";
 
 export default function Skills() {
     return (
@@ -25,13 +26,13 @@ export default function Skills() {
 
             <Stack direction="column" maxW="100%" spacing={16} mx="auto" mt={8}>
                 <Box>
-                    <LanguageGrid />
+                    <SkillsGrid titleTags={["Languages"]} icons={languagesIconSet} />
                 </Box>
                 <Box>
-                    <FrameworkGrid />
+                    <SkillsGrid titleTags={["Frameworks", "Libraries"]} icons={frameworksIconSet} />
                 </Box>
                 <Box>
-                    <DesignPlatformGrid />
+                    <SkillsGrid titleTags={["Design Tools", "Platforms"]} icons={designIconSet} />
                 </Box>
             </Stack>
         </Box>
