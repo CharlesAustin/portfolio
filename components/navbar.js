@@ -87,7 +87,6 @@ export default function Navbar(href) {
                                 <Link
                                     as={NextLink}
                                     href={link.href}
-                                    _activeLink={{ color: "red" }}
                                 >
                                     {link.title}
                                 </Link>
