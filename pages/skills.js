@@ -1,10 +1,8 @@
 import {
     Box,
-    Container,
     Heading,
     Text,
-    Stack,
-    useColorModeValue,
+    Stack
 } from "@chakra-ui/react";
 import SkillsGrid from "../components/skills-grid";
 import { designIconSet } from "../data/design-icons";

@@ -1,5 +1,5 @@
 import { SiLinkedin } from "react-icons/si";
-import { Box, Link, Icon } from "@chakra-ui/react";
+import { Link, Icon } from "@chakra-ui/react";
 
 export default function LinkedInIcon() {
     return (

@@ -5,7 +5,6 @@ import {
     Flex,
     Text,
     Image,
-    Container,
     Link,
     useColorModeValue,
 } from "@chakra-ui/react";

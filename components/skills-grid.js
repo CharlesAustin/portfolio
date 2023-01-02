@@ -6,7 +6,6 @@ import {
     Box,
     Tooltip,
     Card,
-    CardHeader,
     CardBody,
     Icon,
     Flex,

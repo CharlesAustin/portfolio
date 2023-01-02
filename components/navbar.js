@@ -3,7 +3,6 @@ import { useRouter } from "next/router";
 import {
     Box,
     Flex,
-    HStack,
     List,
     ListItem,
     Link,
@@ -12,7 +11,6 @@ import {
     IconButton,
     MenuList,
     MenuItem,
-    chakra,
     useColorModeValue,
 } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";

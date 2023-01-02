@@ -4,9 +4,6 @@ import {
     Heading,
     Text,
     Link,
-    Tag,
-    TagLabel,
-    TagLeftIcon,
     useColorModeValue,
 } from "@chakra-ui/react";
 
