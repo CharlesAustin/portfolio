@@ -2,7 +2,6 @@ import Head from "next/head";
 import Header from "../header";
 import Footer from "../footer";
 import { Container, Box } from "@chakra-ui/react";
-// Add footer...
 
 const Layout = ({ children }) => {
     return (
@@ -51,7 +50,7 @@ const Layout = ({ children }) => {
                 <title>Austin Atkinson</title>
             </Head>
             <Header />
-            <Box as="main" minH={{base: "calc(100vh - 304px)", md: "calc(100vh - 232px)"}}>
+            <Box as="main" minH={{base: "calc(100vh - 264px)", md: "calc(100vh - 196px)"}}>
                 <Container maxW="container.lg">{children}</Container>
             </Box>
             <Footer />

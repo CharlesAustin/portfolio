@@ -40,10 +40,10 @@ export default function Hero() {
                     backgroundColor={bgToggle}
                     color={colorToggle}
                     as={NextLink}
-                    href="./work"
+                    href="./about"
                     variant="linkButton"
                 >
-                    My Work
+                    About Me
                 </Link>
             </Box>
         </Box>

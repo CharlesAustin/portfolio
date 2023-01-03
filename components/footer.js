@@ -35,52 +35,27 @@ export default function Footer() {
                         alignItems="center"
                         direction={{ base: "column", md: "row" }}
                     >
-                        <Box marginLeft={{base: "2rem", md: "0"}}>
+                        <Box marginLeft={{ base: "2rem", md: "0" }}>
                             <Logo />
                         </Box>
                         <List
+                            ml={{ base: "0", md: "3.3rem" }}
+                            mt={{ base: "0.5rem", md: "0" }}
                             display="flex"
                             justifyContent={{
                                 base: "center",
                                 md: "flex-start",
                             }}
-                            ml={{base: "0", md: "8" }}
-                            gap={8}
                         >
-                            {navLinks.map((link) => (
-                                <ListItem
-                                    key={link.title}
-                                    my={{base: "0.5rem", md: "0"}}
-                                    fontFamily={"'IBM Plex Sans', sans-serif"}
-                                    textTransform="capitalize"
-                                >
-                                    <Link
-                                        as={NextLink}
-                                        href={link.href}
-                                        _activeLink={{ color: "blue" }}
-                                    >
-                                        {link.title}
-                                    </Link>
-                                </ListItem>
-                            ))}
+                            <ListItem px={4}>
+                                <GithubIcon />
+                            </ListItem>
+                            <ListItem px={4}>
+                                <LinkedInIcon />
+                            </ListItem>
                         </List>
                     </Flex>
                     <Copyright />
-                </Flex>
-                <Flex direction={{ base: "column", md: "row" }}>
-                    <List
-                        ml={{ base: "0", md: "3.3rem" }}
-                        mt={{base: "0.5rem", md: "0"}}
-                        display="flex"
-                        justifyContent={{ base: "center", md: "flex-start" }}
-                    >
-                        <ListItem px={4}>
-                            <GithubIcon />
-                        </ListItem>
-                        <ListItem px={4}>
-                            <LinkedInIcon />
-                        </ListItem>
-                    </List>
                 </Flex>
             </Container>
         </Box>

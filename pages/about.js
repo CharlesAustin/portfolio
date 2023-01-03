@@ -55,8 +55,8 @@ export default function About() {
             <Text>
                 I love to learn and am always looking to hone my skills,
                 practice a new concept or technology, and learn from others.
-                Right now I&apos;m working on building skills in the JavaScript realm
-                with React, Node.js, and more!
+                Right now I&apos;m working on exploring the JavaScript realm
+                with React & Node.js! I&apos; I've also recently started dipping my toes in the Java world.
             </Text>
         </Box>
     );
