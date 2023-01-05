@@ -41,7 +41,6 @@ export default function Navbar(href) {
     const navLinks = [
         { title: "skills", href: "/skills" },
         { title: "about", href: "/about" },
-        { title: "contact", href: "/contact" },
     ];
     
 

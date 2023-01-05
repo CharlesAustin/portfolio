@@ -12,15 +12,14 @@ const linkButton = defineStyle({
     },
 });
 
-const projectButton = defineStyle({
+const contactMeButton = defineStyle({
     px: 4,
     py: 3,
     borderRadius: 5,
     transition: "150ms all ease-in",
     _hover: {
-        textDecoration: "none",
-        bg: "sunset.300",
-        boxShadow: "0 2px 4px #4A070740",
+        textDecoration: "underline",
+        transform: "translateY(-2px)",
     },
 });
 
@@ -28,5 +27,5 @@ export const linkTheme = defineStyleConfig({
     baseStyle: {
         fontFamily: "'IBM Plex Sans', sans-serif",
     },
-    variants: { linkButton, projectButton },
+    variants: { linkButton, contactMeButton },
 });

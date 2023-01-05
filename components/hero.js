@@ -17,7 +17,6 @@ export default function Hero() {
                 as="h2"
                 size="md"
                 mb={2}
-                fontFamily="Merriweather, sans-serif"
             >
                 Greetings! I&apos;m Austin
             </Heading>
