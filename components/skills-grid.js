@@ -15,19 +15,20 @@ import {
 
 export default function SkillsGrid({ titleTags, icons }) {
     const colorToggle = useColorModeValue("black", "white");
+    const cardBgToggle = useColorModeValue("transparent", "metal.800");
 
     return (
         <>
             <Flex justify="center" mb={5} gap={3}>
                 {titleTags.map((title) => (
-                    <Tag size="lg" variant="solid" key={title}>
+                    <Tag size="lg" variant="solid" key={title} bg="metal.800">
                         <TagLabel>
                             <Heading size={4}>{title}</Heading>
                         </TagLabel>
                     </Tag>
                 ))}
             </Flex>
-            <Card>
+            <Card bg={cardBgToggle}>
                 <CardBody>
                     <Grid
                         gridTemplateColumns={{

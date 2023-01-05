@@ -3,11 +3,10 @@ import Hero from "../components/hero";
 import {
     Box,
     Flex,
-    Heading,
     Icon,
-    Text,
     Link,
-    HStack,
+    Stack,
+    Heading,
     useColorModeValue,
 } from "@chakra-ui/react";
 import { SiGithub, SiLinkedin } from "react-icons/si";
@@ -19,7 +18,12 @@ export default function Home() {
         <Box pb={12}>
             <Hero />
             <Box as="section">
-                <HStack gap={4} alignItems="flex-start">
+                <Heading as="h2" size="md" pb={4}>Get in Touch</Heading>
+                <Stack
+                    spacing={{ base: 0, sm: 12 }}
+                    direction={{ base: "column", sm: "row" }}
+                    alignItems="flex-start"
+                >
                     <Flex>
                         <Link
                             as={NextLink}
@@ -63,7 +67,7 @@ export default function Home() {
                             Email
                         </Link>
                     </Flex>
-                </HStack>
+                </Stack>
             </Box>
         </Box>
     );
