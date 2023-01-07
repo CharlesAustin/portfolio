@@ -11,7 +11,16 @@ import {
     IconButton,
     MenuList,
     MenuItem,
+    Drawer,
+    DrawerHeader,
+    DrawerBody,
+    DrawerFooter,
+    DrawerOverlay,
+    DrawerContent,
+    DrawerCloseButton,
     useColorModeValue,
+    useDisclosure,
+    Button,
 } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import GithubIcon from "./github-icon-link";
@@ -19,15 +28,15 @@ import GithubIcon from "./github-icon-link";
 const NavItem = ({ href, children, ...props }) => {
     const router = useRouter();
     const active = router.pathname === href;
-    const navBgToggle = useColorModeValue('sapphire.500', 'sapphire.50');
-    const navColorToggle = useColorModeValue('white', 'metal.900')
-    
+    const navBgToggle = useColorModeValue("sapphire.500", "sapphire.50");
+    const navColorToggle = useColorModeValue("white", "metal.900");
+
     return (
         <Link
             as={NextLink}
             href={href}
             bg={active ? navBgToggle : undefined}
-            color={active ? navColorToggle :  undefined}
+            color={active ? navColorToggle : undefined}
             {...props}
         >
             {children}
@@ -36,17 +45,54 @@ const NavItem = ({ href, children, ...props }) => {
 };
 
 export default function Navbar(href) {
-
-    
     const navLinks = [
         { title: "skills", href: "/skills" },
         { title: "about", href: "/about" },
     ];
-    
+
+    const { isOpen, onOpen, onClose } = useDisclosure();
+    const drawerToggle = useColorModeValue("metal.50", "metal.800");
 
     return (
         <Box as="nav" w="100%">
             <Flex justify="end" align="center">
+                <Box display={{base: "block", md: "none"}}>
+                    <Button onClick={onOpen}>
+                        <HamburgerIcon />
+                    </Button>
+                    <Drawer
+                        placement="right"
+                        isOpen={isOpen}
+                        onClose={onClose}
+                        size={{ base: "full", md: "xs" }}
+                    >
+                        <DrawerOverlay />
+                        <DrawerContent>
+                            <DrawerCloseButton />
+                            <DrawerBody pt={10} bg={drawerToggle}>
+                                {navLinks.map((link) => (
+                                    <Link
+                                        display="block"
+                                        key={link.title}
+                                        as={NextLink}
+                                        href={link.href}
+                                        _hover={{ bg: "metal.700" }}
+                                        fontSize={20}
+                                        py={2}
+                                        px={4}
+                                        borderRadius="50px"
+                                    >
+                                        {link.title}
+                                    </Link>
+                                ))}
+                                <Link py={2} px={4}>
+                                    <GithubIcon />
+                                </Link>
+                            </DrawerBody>
+                        </DrawerContent>
+                    </Drawer>
+                </Box>
+
                 <Menu isLazy>
                     <List display={{ base: "none", md: "flex" }}>
                         {navLinks.map((link) => (
@@ -61,7 +107,7 @@ export default function Navbar(href) {
                                     px={4}
                                     py={1}
                                     borderRadius="100px"
-                                    _hover={{textDecoration: "none"}}
+                                    _hover={{ textDecoration: "none" }}
                                 >
                                     {link.title}
                                 </NavItem>
@@ -71,26 +117,6 @@ export default function Navbar(href) {
                     <Box px={8}>
                         <GithubIcon />
                     </Box>
-                    <MenuButton
-                        as={IconButton}
-                        aria-label="Main nav"
-                        icon={<HamburgerIcon />}
-                        variant="outline"
-                        display={{ base: "inline-flex", md: "none" }}
-                        mr={5}
-                    />
-                    <MenuList>
-                        {navLinks.map((link) => (
-                            <MenuItem key={link.title}>
-                                <Link
-                                    as={NextLink}
-                                    href={link.href}
-                                >
-                                    {link.title}
-                                </Link>
-                            </MenuItem>
-                        ))}
-                    </MenuList>
                 </Menu>
             </Flex>
         </Box>
