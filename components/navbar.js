@@ -7,14 +7,8 @@ import {
     ListItem,
     Link,
     Menu,
-    MenuButton,
-    IconButton,
-    MenuList,
-    MenuItem,
     Drawer,
-    DrawerHeader,
     DrawerBody,
-    DrawerFooter,
     DrawerOverlay,
     DrawerContent,
     DrawerCloseButton,
@@ -81,12 +75,13 @@ export default function Navbar(href) {
                                         py={2}
                                         px={4}
                                         borderRadius="50px"
+                                        onClick={onClose}
                                     >
                                         {link.title}
                                     </Link>
                                 ))}
                                 <Link py={2} px={4}>
-                                    <GithubIcon />
+                                    <GithubIcon/>
                                 </Link>
                             </DrawerBody>
                         </DrawerContent>
@@ -115,7 +110,7 @@ export default function Navbar(href) {
                         ))}
                     </List>
                     <Box px={8}>
-                        <GithubIcon />
+                        <GithubIcon display={{base: "none", md: "flex"}}/>
                     </Box>
                 </Menu>
             </Flex>
