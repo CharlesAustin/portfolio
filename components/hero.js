@@ -10,7 +10,7 @@ export default function Hero() {
             <Heading as="h1" variant="hero">
                 Developer & Designer
             </Heading>
-            <Text maxW="60ch" mt={6}>
+            <Text maxW="60ch" mt={6} fontSize={{base: 18, md: 20}}>
                 I enjoy building projects for this living, breathing place we
                 call the web. Passionate about the space where development &
                 design intersects.
