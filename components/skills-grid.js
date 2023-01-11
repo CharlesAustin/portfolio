@@ -16,6 +16,7 @@ import {
 export default function SkillsGrid({ titleTags, icons }) {
     const colorToggle = useColorModeValue("black", "white");
     const cardBgToggle = useColorModeValue("transparent", "metal.800");
+    const cardBorderToggle = useColorModeValue("metal.50", "transparent");
 
     return (
         <>
@@ -28,7 +29,7 @@ export default function SkillsGrid({ titleTags, icons }) {
                     </Tag>
                 ))}
             </Flex>
-            <Card bg={cardBgToggle}>
+            <Card bg={cardBgToggle} borderWidth="1px" borderStyle="solid" borderColor={cardBorderToggle}>
                 <CardBody>
                     <Grid
                         gridTemplateColumns={{

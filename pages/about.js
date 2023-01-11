@@ -6,17 +6,13 @@ import {
     Image,
     Flex,
     Tag,
-    Link,
-    Icon,
     useColorModeValue,
     TagLabel,
 } from "@chakra-ui/react";
 import CtaLink from "../components/cta-button";
 
 export default function About() {
-    // logic
     const borderToggle = useColorModeValue("metal.500", "sapphire.50");
-    const textToggle = useColorModeValue("metal.900", "white");
 
     return (
         <Box as="section" maxW="lg" margin="0 auto" py={12}>
