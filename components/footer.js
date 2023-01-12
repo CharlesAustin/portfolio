@@ -1,11 +1,9 @@
-import NextLink from "next/link";
 import {
     Box,
     Container,
     Flex,
     List,
     ListItem,
-    Link,
     useColorModeValue,
 } from "@chakra-ui/react";
 import Logo from "./logo";
