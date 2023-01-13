@@ -3,7 +3,7 @@ import Navbar from "./navbar";
 import { Box, Flex, Container } from "@chakra-ui/react";
 import ThemeToggleButton from "./theme-toggle-button";
 
-export default function Header({ children }) {
+export default function Header() {
     return (
         <Box as="header" py={5}>
             <Container maxW="container.lg">
