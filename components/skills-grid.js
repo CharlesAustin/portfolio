@@ -29,7 +29,12 @@ export default function SkillsGrid({ titleTags, icons }) {
                     </Tag>
                 ))}
             </Flex>
-            <Card bg={cardBgToggle} borderWidth="1px" borderStyle="solid" borderColor={cardBorderToggle}>
+            <Card
+                bg={cardBgToggle}
+                borderWidth="1px"
+                borderStyle="solid"
+                borderColor={cardBorderToggle}
+            >
                 <CardBody>
                     <Grid
                         gridTemplateColumns={{
