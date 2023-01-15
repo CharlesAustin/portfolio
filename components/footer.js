@@ -12,13 +12,6 @@ import LinkedInIcon from "./linkedin-icon-link";
 import Copyright from "./copyright";
 
 export default function Footer() {
-    const navLinks = [
-        { title: "work", href: "/work" },
-        { title: "skills", href: "/skills" },
-        { title: "about", href: "/about" },
-        { title: "contact", href: "/contact" },
-    ];
-
     const darkMode = useColorModeValue("metal.50", "metal.800");
 
     return (
