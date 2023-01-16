@@ -2,7 +2,7 @@ import { Box } from "@chakra-ui/react";
 
 export default function Copyright() {
     return (
-        <Box as="p" fontFamily={"'IBM Plex Sans', sans-serif"}>
+        <Box as="p">
             &copy; Austin Atkinson {new Date().getFullYear()}
         </Box>
     );
