@@ -2,7 +2,7 @@ import { useColorModeValue } from "@chakra-ui/react";
 import Link from "next/link";
 export default function Logo() {
     return (
-        <Link href="/">
+        <Link href="/" aria-label="home">
             <svg
                 width="46"
                 height="36"
