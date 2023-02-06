@@ -50,7 +50,7 @@ export default function Navbar(href) {
     return (
         <Box as="nav" w="100%">
             <Flex justify="end" align="center">
-                <Box display={{base: "block", md: "none"}}>
+                <Box display={{ base: "block", md: "none" }}>
                     <Button onClick={onOpen} mr={4}>
                         <HamburgerIcon />
                     </Button>
@@ -80,7 +80,7 @@ export default function Navbar(href) {
                                         {link.title}
                                     </Link>
                                 ))}
-                                    <GithubIcon/>
+                                <GithubIcon />
                             </DrawerBody>
                         </DrawerContent>
                     </Drawer>
@@ -107,8 +107,8 @@ export default function Navbar(href) {
                             </ListItem>
                         ))}
                     </List>
-                    <Box px={8} display={{base: "none", md: "flex"}}>
-                        <GithubIcon display={{base: "none", md: "flex"}}/>
+                    <Box px={8} display={{ base: "none", md: "flex" }}>
+                        <GithubIcon display={{ base: "none", md: "flex" }} />
                     </Box>
                 </Menu>
             </Flex>
