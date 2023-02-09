@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://austin-atkinson.com
+
+# Sitemaps
+Sitemap: https://austin-atkinson.com/sitemap.xml
