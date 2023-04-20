@@ -60,8 +60,7 @@ export default function About() {
                 I love to learn and am always looking to hone my skills,
                 practice a new concept or technology, and learn from others.
                 Right now I&apos;m working on exploring the JavaScript realm
-                with React & Node.js! I&apos;ve also recently started dipping my
-                toes into the world of Java.
+                with React & Node.js! I&apos;ve also recently started working with Craft CMS.
             </Text>
             <CtaLink
                 linkAddress="https://www.linkedin.com/in/austin-atkinson-0687978a/"
