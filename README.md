@@ -7,3 +7,5 @@ This site is built with the following:
 - [Chakra UI](https://chakra-ui.com/)
 
 Deployed via [Vercel](https://vercel.com/)
+
+TODO: add changelog
