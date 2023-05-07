@@ -80,7 +80,7 @@ export default function About() {
 				I have past experience in the PHP space developing a variety of
 				custom CMS solutions with WordPress and Drupal, and ecommerce
 				projects via Shopify. The JavaScript ecosystem is of particular
-				interest to me due to it's ubiquity, versatility, and the
+				interest to me due to it&apos;s ubiquity, versatility, and the
 				numerous amount of robust frameworks built with it, like Next
 				and React.
 			</Text>
